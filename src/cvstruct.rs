@@ -74,6 +74,7 @@ impl CVStruct {
                 university_name: "University at My Place".to_string(),
                 location: "Another Place, Earth".to_string(),
                 course_grade: "A".to_string(),
+                degree: "BA".to_string(),
                 points: Some(vec![
                     "Did some useful work Y".to_string(),
                     "Did some useful work Z".to_string(),
@@ -175,6 +176,7 @@ pub struct EducationField {
     pub university_link: String,
     pub location: String,
     pub course_grade: String,
+    pub degree: String,
     pub points: Option<Vec<String>>,
 }
 
