@@ -53,11 +53,15 @@ impl CVStruct {
             meta: None,
             header: Some(Header {
                 full_name: "John Doe".to_string(),
+                age: "22".to_string(),
                 email_addr: "john@doe.com".to_string(),
                 github_username: "github".to_string(),
                 linkedin_username: "linkedin".to_string(),
                 location: "Some Place, Earth".to_string(),
                 phone_number: "1234567890".to_string(),
+                subject: "Computer Science and Technology".to_string(),
+                job_name: "Devops".to_string(),
+
             }),
             education: Some(vec![EducationField {
                 course_name: "Bachelor of Technology in Computer Science".to_string(),
@@ -148,11 +152,14 @@ impl CVStruct {
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Header {
     pub full_name: String,
+    pub age: String,
     pub email_addr: String,
     pub github_username: String,
     pub linkedin_username: String,
     pub location: String,
     pub phone_number: String,
+    pub subject: String,
+    pub job_name: String,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
