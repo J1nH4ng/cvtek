@@ -17,7 +17,12 @@ struct Asset;
 
 static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
     let mut tera = Tera::default();
-    let template_list = ["resume.tex.tmpl", "resume-cn.tex.tmpl", "resume.md.tmpl", "resume-cn.md.tmpl"];
+    let template_list = [
+        "resume.tex.tmpl",
+        "resume-cn.tex.tmpl",
+        "resume.md.tmpl",
+        "resume-cn.md.tmpl",
+    ];
     for each_temp in template_list {
         if let Some(content) = Asset::get(each_temp) {
             tera.add_raw_template(
